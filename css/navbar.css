@@ -22,6 +22,10 @@ nav {
     margin: 0;
 }
 
+.desktop-nav {
+    display: none;
+}
+
 .mobile-nav {
     display: none;
     height: 100vh;
@@ -82,4 +86,21 @@ nav {
 }
 .cross-hamburger::after {
     transform: rotate(45deg) !important;
+}
+
+
+@media screen and (min-width: 792px) {
+    #menu {
+        display: none;
+    }
+
+    .desktop-nav {
+        display: flex;
+    }
+    
+    .desktop-nav a {
+        font-weight: bold;
+        font-size: 22px;
+        margin: 0 10px;
+    }
 }

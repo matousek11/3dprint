@@ -1,16 +1,23 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width" />
         <title>3D print</title>
         <link rel="stylesheet" href="./css/styles.css" />
         <link rel="stylesheet" href="./css/navbar.css" />
         <link rel="stylesheet" href="./css/footer.css" />
         <script defer src="js/navbar.js"></script>
-        <meta name="viewport" content="width=device-width" />
     </head>
     <body>
         <nav>
             <div class="visible-nav">
                 <p>3D Print</p>
+                <div class="desktop-nav">
+                    <a href="index.html">Úvod</a>
+                    <a href="vyrobky.html">Výrobky</a>
+                    <a href="materialy.html">Tiskové materiály</a>
+                    <a href="objednavka.html">Objednat</a>
+                    <a href="odhad-ceny.html">Odhad ceny</a>
+                </div>
                 <div id="menu">
                     <div id="hamburger"></div>
                 </div>
@@ -38,90 +45,106 @@
             </div>
         </section>
         <section class="margin-wrapper">
-            <p>
-                Vítejte na stránkách naší společnosti 3D Print, která nabízí
-                revoluční způsob výroby tištěných 3D výrobků - a to přímo z
-                pohodlí vašeho domova! Jsme lídrem v oblasti online 3D tisku a
-                poskytujeme našim zákazníkům jedinečnou možnost realizovat své
-                nápady prostřednictvím moderních technologií bez nutnosti
-                pořizovat si vlastní tiskárnu.
-            </p>
-            <img src="img/model.jpeg" />
+            <div class="max-width">
+                <p>
+                    Vítejte na stránkách naší společnosti 3D Print, která nabízí
+                    revoluční způsob výroby tištěných 3D výrobků - a to přímo z
+                    pohodlí vašeho domova! Jsme lídrem v oblasti online 3D tisku
+                    a poskytujeme našim zákazníkům jedinečnou možnost realizovat
+                    své nápady prostřednictvím moderních technologií bez
+                    nutnosti pořizovat si vlastní tiskárnu.
+                </p>
+                <img src="img/model.jpeg" alt="Printed 3D model" />
+            </div>
         </section>
         <section class="last-section margin-wrapper">
-            <h2>Jak to funguje?</h2>
-            <ul class="steps">
-                <li>
-                    <span class="number">1.</span>
-                    <p>
-                        Vytvořte si 3D model ve formátu STL a nahrajte ho zde.
-                        Model můžete vytvořit v nástrojích jako je AutoCAD nebo
-                        Blender. Můžete si také vybrat již hotový model na
-                        stránce thingiverse.
-                    </p>
-                </li>
-                <li>
-                    <span class="number">2.</span>
-                    <p>Nahrajte model přes formulář zde a zvolte si rozměr.</p>
-                </li>
-                <li>
-                    <span class="number">3.</span>
-                    <p>
-                        Zvolte materiál, kterým chcete tisknout. Více o
-                        materiálech se můžete dočíst v sekci materiály.
-                    </p>
-                </li>
-                <li>
-                    <span class="number">4.</span>
-                    <p>
-                        Zadejte vaši adresu, zaplaťte a pak už se můžete těšit
-                        na váš 3D model, který přijde za pár dní.
-                    </p>
-                </li>
-            </ul>
-            <div class="button-wrapper">
-                <button class="glassomorphism">Objednat model</button>
+            <div class="max-width">
+                <h2>Jak to funguje?</h2>
+                <ul class="steps">
+                    <li>
+                        <span class="number">1.</span>
+                        <p>
+                            Vytvořte si 3D model ve formátu STL a nahrajte ho
+                            zde. Model můžete vytvořit v nástrojích jako je
+                            <a href="https://www.autodesk.cz/products/autocad/overview">AutoCAD</a> nebo <a href="https://www.blender.org/">Blender</a>. Můžete si také vybrat již
+                            hotový model na stránce <a href="https://www.thingiverse.com/">Thingiverse</a>.
+                        </p>
+                    </li>
+                    <li>
+                        <span class="number">2.</span>
+                        <p>
+                            Nahrajte model přes formulář zde a zvolte si rozměr.
+                        </p>
+                    </li>
+                    <li>
+                        <span class="number">3.</span>
+                        <p>
+                            Zvolte materiál, kterým chcete tisknout. Více o
+                            materiálech se můžete dočíst v sekci materiály.
+                        </p>
+                    </li>
+                    <li>
+                        <span class="number">4.</span>
+                        <p>
+                            Zadejte vaši adresu, zaplaťte a pak už se můžete
+                            těšit na váš 3D model, který přijde za pár dní.
+                        </p>
+                    </li>
+                </ul>
+                <div class="button-wrapper">
+                    <button class="glassomorphism">Objednat model</button>
+                </div>
             </div>
         </section>
         <footer>
             <div class="margin-wrapper">
-                <div>
-                    <h3>Menu</h3>
-                    <ul>
-                        <li><a href="index.html">Úvod</a></li>
-                        <li><a href="vyrobky.html">Výrobky</a></li>
-                        <li><a href="materialy.html">Tiskové materiály</a></li>
-                        <li><a href="objednavka.html">Objednat</a></li>
-                        <li><a href="odhad-ceny.html">Odhad ceny</a></li>
-                        <li><a href="odhad-ceny.html">Mapa stránky</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Kontakt</h3>
-                    <ul class="footer-contact-list">
-                        <li>
-                            <img src="img/icons/email.svg" />
-                            <a href="mailto:mail@mail.cz">mail@mail.cz</a>
-                        </li>
-                        <li>
-                            <img src="img/icons/phone.svg" />
-                            <a href="tel:+420000000000">000 000 000</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Adresa</h3>
-                    <iframe
-                        width="250"
-                        height="250"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5615.863315869834!2d15.832088604870552!3d50.20579514309079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c2b34870002db%3A0xb60b1af457f3fbb2!2sUniverzita%20Hradec%20Kr%C3%A1lov%C3%A9%20%E2%80%93%20budova%20A!5e0!3m2!1scs!2scz!4v1710001424466!5m2!1scs!2scz"
-                        width="600"
-                        height="450"
-                        style="border: 0"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                    ></iframe>
+                <div class="desktop-footer max-width">
+                    <div>
+                        <h3>Menu</h3>
+                        <ul>
+                            <li><a href="index.html">Úvod</a></li>
+                            <li><a href="vyrobky.html">Výrobky</a></li>
+                            <li>
+                                <a href="materialy.html">Tiskové materiály</a>
+                            </li>
+                            <li><a href="objednavka.html">Objednat</a></li>
+                            <li><a href="odhad-ceny.html">Odhad ceny</a></li>
+                            <li><a href="odhad-ceny.html">Mapa stránky</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Kontakt</h3>
+                        <ul class="footer-contact-list">
+                            <li>
+                                <img
+                                    src="img/icons/email.svg"
+                                    alt="email icon"
+                                />
+                                <a href="mailto:mail@mail.cz">mail@mail.cz</a>
+                            </li>
+                            <li>
+                                <img
+                                    src="img/icons/phone.svg"
+                                    alt="phone icon"
+                                />
+                                <a href="tel:+420000000000">000 000 000</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Adresa</h3>
+                        <iframe
+                            width="250"
+                            height="250"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5615.863315869834!2d15.832088604870552!3d50.20579514309079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c2b34870002db%3A0xb60b1af457f3fbb2!2sUniverzita%20Hradec%20Kr%C3%A1lov%C3%A9%20%E2%80%93%20budova%20A!5e0!3m2!1scs!2scz!4v1710001424466!5m2!1scs!2scz"
+                            width="600"
+                            height="450"
+                            style="border: 0"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
                 </div>
 
                 <p class="info">Studentská práce &copy;3D Print</p>

@@ -17,6 +17,11 @@ li {
     transition: all .3s ease-in-out;
 }
 
+/*article link */
+p a:hover {
+    text-decoration: underline;
+}
+
 li:hover {
     margin-left: 10px;
 }
@@ -25,6 +30,7 @@ button {
     color: white;
     font-size: 22px;
     height: 50px;
+    max-width: 300px;
     padding: 6px;
     border-radius: 6px;
     font-weight: bold;
@@ -64,7 +70,8 @@ iframe {
 
 .main-text {
     position: absolute;
-    left: 20px;
+    max-width: 350px;
+    margin-left: 20px;
     right: 8px;
     bottom: -5px;
     border-radius: 10px;
@@ -143,4 +150,16 @@ iframe {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+@media screen and (min-width: 792px) {
+    .max-width {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .main-text {
+        bottom: 50px;
+        left: 1%;
+    }
 }

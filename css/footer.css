@@ -42,3 +42,11 @@ footer {
 .footer-contact-list img:hover {
     filter: none;
 }
+
+@media screen and (min-width: 792px) {
+    .desktop-footer {
+        display: flex;
+        justify-content: space-between;
+        max-width: 900px;
+    }
+}
