@@ -22,10 +22,6 @@ p a:hover {
     text-decoration: underline;
 }
 
-li:hover {
-    margin-left: 10px;
-}
-
 button {
     color: white;
     font-size: 22px;

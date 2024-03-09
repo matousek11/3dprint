@@ -10,6 +10,10 @@ footer {
     padding-bottom: 4px;
 }
 
+footer li:hover {
+    margin-left: 10px;
+}
+
 .info {
     text-align: center;
     font-size: 12px;
