@@ -1,6 +1,29 @@
+@font-face {
+    font-family: manrope;
+    src: url(../fonts/manrope.ttf)
+}
+
+@font-face {
+    font-family: munich;
+    src: url(../fonts/munich.ttf)
+}
+
+@font-face {
+    font-family: peace-sans;
+    src: url(../fonts/peace-sans.otf)
+}
+
 body {
     margin: 0;
     padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: manrope !important;
+}
+
+p, a {
+    font-family: manrope !important;
 }
 
 h3 {
@@ -31,8 +54,8 @@ button {
     border-radius: 6px;
     font-weight: bold;
     border: none;
-    float: right;
     transition: all .3s ease-in-out;
+    background: linear-gradient(45deg,rgba(63, 0, 113, 0.4), rgba(251, 37, 118, 0.4), rgba(255, 255, 255, 0.4));
 }
 
 button:hover {
@@ -55,7 +78,13 @@ iframe {
 
 .glassomorphism {
     backdrop-filter: blur(5px) saturate(100%);
-    background: linear-gradient(45deg, rgba(255, 0, 0, 0.4), rgba(255, 170, 0, 0.4));
+    background: linear-gradient(-45deg,rgba(63, 0, 113, 0.4), rgba(251, 37, 118, 0.4));
+}
+
+.clean-glassomorphism {
+    backdrop-filter: blur(5px) saturate(100%);
+    background-color: rgba(200, 200, 200, .3) !important;
+    background: none;
 }
 
 /* welcome part of page */
@@ -81,6 +110,10 @@ iframe {
     margin: 0;
 }
 
+.main-text button {
+    float: right;
+}
+
 .main-img {
     width: 100%;
     height: 80vh;
@@ -97,7 +130,7 @@ iframe {
     padding-top: 10px;
     z-index: -2;
     color: white;
-    background: linear-gradient(-45deg, #3F0071, #FB2576);
+    background: linear-gradient(45deg,#3F0071, #FB2576, rgba(255, 255, 255, 1));
 }
 
 /* number styles*/
@@ -122,6 +155,7 @@ iframe {
 .steps li p {
     position: relative;
     z-index: 4;
+    max-width: 350px;
 }
 
 .button-wrapper {

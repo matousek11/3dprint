@@ -1,0 +1,92 @@
+h3 {
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 2px;
+    margin-bottom: 8px;
+}
+
+.form {
+    position: relative;
+    background: linear-gradient(45deg,#3F0071, #FB2576);
+    border-radius: 10px;
+    color: white;
+    padding-top: 5px;
+    max-width: 400px;
+}
+
+.form-input {
+    display: block;
+    color: white !important;
+    border: none;
+    border-radius: 6px;
+    height: 40px;
+    width: 100%;
+}
+
+.form-input:focus {
+    outline: none;
+    outline-color: #3F0071;
+    outline-width: 2px;
+    outline-style: solid;
+    box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-input::placeholder {
+    color: white !important;
+}
+
+.info-box {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 10px;
+    border: solid 1px rgba(255,255,255, 0.1);
+    background: linear-gradient(-45deg,rgba(63, 0, 113, 0.8), rgba(251, 37, 118, 0.8));
+}
+
+.info-box > div {
+    display: flex;
+    justify-content: center;
+}
+
+.info-box button {
+    width: 80%;
+}
+
+.info-box-background {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+.hide-info-box {
+    display: none !important;
+}
+.hide-info-box + .info-box-background {
+    display: none !important;
+}
+
+
+.input-wrapper {
+    margin-bottom: 15px;
+}
+
+#price {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 0px;
+    padding-bottom: 13px;
+    transition: all .3s ease-in-out;
+}

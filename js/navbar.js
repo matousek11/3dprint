@@ -2,7 +2,7 @@ let mobileMenuId = 'mobile-nav';
 let openMenuClass = 'cross-hamburger';
 let displayClass = 'display-mobile-nav';
 
-const init = () => {
+const initNav = () => {
     document.getElementById('menu').addEventListener('click', onMenuClick);
 }
 
@@ -32,9 +32,9 @@ const displayMobileMenu = () => {
 }
 
 if (!!window.addEventListener) {
-    window.addEventListener("DOMContentLoaded", init);
+    window.addEventListener("DOMContentLoaded", initNav);
 } else {
     // MSIE
-    window.attachEvent("onload", init);
+    window.attachEvent("onload", initNav);
 }
 
