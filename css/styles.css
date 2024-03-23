@@ -124,6 +124,41 @@ iframe {
     padding: 0px 15px;
 }
 
+.material-properties-wrapper {
+    display: flex;
+    align-items: start;
+}
+
+.info-cell {
+    min-width: 200px;
+    max-width: 280px;
+    margin-left: 20px;
+    right: 8px;
+    bottom: -5px;
+    border-radius: 10px;
+    padding: 0px 10px; 
+    color: white;
+    background: linear-gradient(-45deg,rgba(63, 0, 113, 0.6), rgba(251, 37, 118, 0.6));
+}
+
+.info-cell ul {
+    list-style-type: disc !important;
+    padding-left: 0px;
+    margin-left: 15px;
+}
+
+.info-cell li {
+    width: 100%;
+}
+
+.colored-line {
+    max-width: 900px;
+    height: 3px;
+    background: linear-gradient(-275deg,rgba(63, 0, 113, 0.6), rgba(251, 37, 118, 0.6));
+    border: none;
+    border-radius: 2px;
+}
+
 /* colored section */
 
 .last-section {
