@@ -6,17 +6,33 @@
         <link rel="stylesheet" href="./css/navbar.css" />
         <link rel="stylesheet" href="./css/footer.css" />
         <script defer src="js/navbar.js"></script>
+        <script defer type="module" src="js/threejs/main.js"></script>
     </head>
     <body>
         <nav>
             <div class="visible-nav">
-                <p>3D Print</p>
+                <a href="/"><p>3D Print</p></a>
                 <div class="desktop-nav">
-                    <a href="index.html">Úvod</a>
-                    <a href="vyrobky.html">Výrobky</a>
-                    <a href="materialy.html">Tiskové materiály</a>
-                    <a href="odhad-ceny.html">Odhad ceny</a>
-                    <a href="objednavka.html">Objednat</a>
+                    <div>
+                        <a href="index.html">Úvod</a>
+                        <div></div>
+                    </div>
+                    <div>
+                        <a href="vyrobky.html">Výrobky</a>
+                        <div></div>
+                    </div>
+                    <div>
+                        <a href="materialy.html">Tiskové materiály</a>
+                        <div></div>
+                    </div>
+                    <div>
+                        <a href="odhad-ceny.html">Odhad ceny</a>
+                        <div></div>
+                    </div>
+                    <div>
+                        <a href="objednavka.html">Objednat</a>
+                        <div></div>
+                    </div>
                 </div>
                 <div id="menu">
                     <div id="hamburger"></div>
@@ -24,11 +40,26 @@
             </div>
             <div id="mobile-nav" class="mobile-nav">
                 <ul>
-                    <li><a href="index.html">Úvod</a></li>
-                    <li><a href="vyrobky.html">Výrobky</a></li>
-                    <li><a href="materialy.html">Tiskové materiály</a></li>
-                    <li><a href="odhad-ceny.html">Odhad ceny</a></li>
-                    <li><a href="objednavka.html">Objednat</a></li>
+                    <li>
+                        <a href="index.html">Úvod</a>
+                        <div></div>
+                    </li>
+                    <li>
+                        <a href="vyrobky.html">Výrobky</a>
+                        <div></div>
+                    </li>
+                    <li>
+                        <a href="materialy.html">Tiskové materiály</a>
+                        <div></div>
+                    </li>
+                    <li>
+                        <a href="odhad-ceny.html">Odhad ceny</a>
+                        <div></div>
+                    </li>
+                    <li>
+                        <a href="objednavka.html">Objednat</a>
+                        <div></div>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -66,8 +97,15 @@
                         <p>
                             Vytvořte si 3D model ve formátu STL a nahrajte ho
                             zde. Model můžete vytvořit v nástrojích jako je
-                            <a href="https://www.autodesk.cz/products/autocad/overview">AutoCAD</a> nebo <a href="https://www.blender.org/">Blender</a>. Můžete si také vybrat již
-                            hotový model na stránce <a href="https://www.thingiverse.com/">Thingiverse</a>.
+                            <a
+                                href="https://www.autodesk.cz/products/autocad/overview"
+                                >AutoCAD</a
+                            >
+                            nebo <a href="https://www.blender.org/">Blender</a>.
+                            Můžete si také vybrat již hotový model na stránce
+                            <a href="https://www.thingiverse.com/"
+                                >Thingiverse</a
+                            >.
                         </p>
                     </li>
                     <li>
@@ -95,39 +133,64 @@
                     <button class="glassomorphism">Objednat model</button>
                 </div>
             </div>
+            <div id="model-container"></div>
         </section>
         <footer>
             <div class="margin-wrapper">
                 <div class="desktop-footer max-width">
                     <div>
                         <h3>Menu</h3>
-                        <ul>
-                            <li><a href="index.html">Úvod</a></li>
-                            <li><a href="vyrobky.html">Výrobky</a></li>
+                        <ul class="footer-part-wrapper">
+                            <li>
+                                <a href="index.html">Úvod</a>
+                                <div></div>
+                            </li>
+                            <li>
+                                <a href="vyrobky.html">Výrobky</a>
+                                <div></div>
+                            </li>
                             <li>
                                 <a href="materialy.html">Tiskové materiály</a>
+                                <div></div>
                             </li>
-                            <li><a href="odhad-ceny.html">Odhad ceny</a></li>
-                            <li><a href="objednavka.html">Objednat</a></li>
-                            <li><a href="odhad-ceny.html">Mapa stránky</a></li>
+                            <li>
+                                <a href="odhad-ceny.html">Odhad ceny</a>
+                                <div></div>
+                            </li>
+                            <li>
+                                <a href="objednavka.html">Objednat</a>
+                                <div></div>
+                            </li>
+                            <li>
+                                <a href="odhad-ceny.html">Mapa stránky</a>
+                                <div></div>
+                            </li>
                         </ul>
                     </div>
                     <div>
                         <h3>Kontakt</h3>
                         <ul class="footer-contact-list">
                             <li>
-                                <img
-                                    src="img/icons/email.svg"
-                                    alt="email icon"
-                                />
-                                <a href="mailto:mail@mail.cz">mail@mail.cz</a>
+                                <div>
+                                    <img
+                                        src="img/icons/email.svg"
+                                        alt="email icon"
+                                    />
+                                    <a href="mailto:mail@mail.cz"
+                                        >mail@mail.cz</a
+                                    >
+                                </div>
+                                <div></div>
                             </li>
                             <li>
-                                <img
-                                    src="img/icons/phone.svg"
-                                    alt="phone icon"
-                                />
-                                <a href="tel:+420000000000">000 000 000</a>
+                                <div>
+                                    <img
+                                        src="img/icons/phone.svg"
+                                        alt="phone icon"
+                                    />
+                                    <a href="tel:+420000000000">000 000 000</a>
+                                </div>
+                                <div></div>
                             </li>
                         </ul>
                     </div>
@@ -146,7 +209,6 @@
                         ></iframe>
                     </div>
                 </div>
-
                 <p class="info">Studentská práce &copy;3D Print</p>
             </div>
         </footer>

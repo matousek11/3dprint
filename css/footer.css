@@ -10,41 +10,28 @@ footer {
     padding-bottom: 4px;
 }
 
-footer li:hover {
-    margin-left: 10px;
-}
-
 .info {
     text-align: center;
     font-size: 12px;
     margin-bottom: 0;
 }
 
-.footer-contact-list li {
+.desktop-footer li, .footer-contact-list li {
     display: flex;
     align-items: center;
     margin-bottom: 5px;
 }
 
-.footer-contact-list li:hover a {
-    filter: none;
-    color: rgb(255, 0, 0);
-}
-.footer-contact-list li:hover img {
-    filter: none;
-    color: rgb(255, 0, 0);
+.desktop-footer li div, .footer-contact-list li div:last-child {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
 }
 
 .footer-contact-list img {
     width: 20px;
     margin-right: 10px;
-    fill: rgba(255, 0, 0);
-    filter: brightness(0) invert(1);
     cursor: pointer;
-}
-
-.footer-contact-list img:hover {
-    filter: none;
 }
 
 @media screen and (min-width: 792px) {
