@@ -10,9 +10,12 @@ const infoBoxTextID = 'info-box-text';
 const initCalculator = () => {
     document.getElementById('calculate-price-button').addEventListener('click', calculate);
     document.getElementById('info-box-close-button').addEventListener('click', hideAlertBox);
+    if (document.getElementById('order-button') !== null) {
+        document.getElementById('order-button').addEventListener('click', order);
+    }
 }
 
-const calculate = () => {
+const calculate = (isOrder) => {
     let materialID = document.getElementById(materialElID).value;
     let x = document.getElementById(xSizeElID).value;
     x = parseInt(x);
@@ -27,12 +30,16 @@ const calculate = () => {
 
     formModel = new FormModel(materialID, x, y, z, infoBox, infoBoxHeader, infoBoxText);
 
-    priceEstimation = formModel.estimatePrice();
+    priceEstimation = formModel.estimatePrice(isOrder);
     priceEl.innerHTML = priceEstimation + 'Kč';
 }
 
 const hideAlertBox = () => {
     document.getElementById(infoBoxID).classList.add('hide-info-box');
+}
+
+const order = () => {
+    calculate(true);
 }
 
 if (!!window.addEventListener) {

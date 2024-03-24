@@ -14,10 +14,13 @@ class FormModel {
         this.text = text;
     }
 
-    estimatePrice () {
+    estimatePrice (isOrder) {
         if (this.validateValues()) {
             let modelVolume = this.x * this.y * this.z;
             let modelPrice = modelVolume * this.materialPrice[this.materialID];
+            if (isOrder === true) {
+                this.displayInfoBox('Odesláno', 'Objednávka byla odeslána.');
+            }
             return modelPrice;
         }
         
@@ -26,28 +29,29 @@ class FormModel {
 
     validateValues() {
         if (this.materialID < 0 && this.materialID > 2) {
-            this.displayErrorInfoBox('Špatné ID materiálu', 'Vyberte jiný materiál.');
+            this.displayInfoBox('Špatné ID materiálu', 'Vyberte jiný materiál.');
             return false;
         }
+
         if (!Number.isInteger(this.x)) {
-            this.displayErrorInfoBox('Zadána špatná hodnota', 'Hodnota délky X musí být číslo.');
+            this.displayInfoBox('Zadána špatná hodnota', 'Hodnota délky X musí být číslo.');
             return false;
         }
 
         if (!Number.isInteger(this.y)) {
-            this.displayErrorInfoBox('Zadána špatná hodnota', 'Hodnota délky Y musí být číslo.');
+            this.displayInfoBox('Zadána špatná hodnota', 'Hodnota délky Y musí být číslo.');
             return false;
         }
 
         if (!Number.isInteger(this.z)) {
-            this.displayErrorInfoBox('Zadána špatná hodnota', 'Hodnota délky Z musí být číslo.');
+            this.displayInfoBox('Zadána špatná hodnota', 'Hodnota délky Z musí být číslo.');
             return false;
         }
 
         return true;
     }
 
-    displayErrorInfoBox(header, text) {
+    displayInfoBox(header, text) {
         this.alertBox.classList.remove('hide-info-box');
         this.header.innerText = header;
         this.text.innerText = text;
