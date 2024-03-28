@@ -26,6 +26,15 @@ p, a {
     font-family: manrope !important;
 }
 
+input,
+textarea,
+button,
+select,
+a,
+img {
+    -webkit-tap-highlight-color: transparent;
+}
+
 section a {
     text-decoration: underline !important;
     color: black;
@@ -50,20 +59,24 @@ p a:hover {
     text-decoration: underline;
 }
 
-button {
+button, .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     font-size: 22px;
-    height: 50px;
+    height: 40px;
     max-width: 300px;
     padding: 6px;
     border-radius: 6px;
     font-weight: bold;
     border: none;
     transition: all .3s ease-in-out;
+    text-decoration: none !important;
     background: linear-gradient(45deg,rgba(63, 0, 113, 0.4), rgba(251, 37, 118, 0.4), rgba(255, 255, 255, 0.4));
 }
 
-button:hover {
+button:hover, .button:hover {
     cursor: pointer;
     box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.2);
 }
@@ -92,6 +105,20 @@ iframe {
     background: none;
 }
 
+.header {
+    display: flex;
+}
+
+.header img {
+    width: 35px;
+    margin-right: 10px;
+    transition: all .3s ease-in-out;;
+}
+
+.header:hover img {
+    transform: rotate(90deg);
+}
+
 /* welcome part of page */
 
 .intro {
@@ -115,7 +142,7 @@ iframe {
     margin: 0;
 }
 
-.main-text button {
+.main-text button, .main-text .button {
     float: right;
 }
 
@@ -126,6 +153,10 @@ iframe {
 }
 
 .margin-wrapper {
+    margin: 0px 15px;
+}
+
+.padding-wrapper {
     padding: 0px 15px;
 }
 
@@ -202,7 +233,7 @@ iframe {
     justify-content: center;
     padding-bottom: 15px;
 }
-.button-wrapper button {
+.button-wrapper button, .button-wrapper .button {
     float: none;
     height: 50px;
     width: 100%;

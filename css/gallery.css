@@ -2,7 +2,7 @@
     display: grid;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 25px;
+    padding: 20px 10px 25px 10px;
 }
 
 .gallery img {
@@ -33,11 +33,12 @@
 
 .fullscreen-image-wrapper > div {
     position: relative;
-    width: 60%;
+    width: 90%;
 }
 
 .fullscreen-image-wrapper img {
     width: 100%;
+    border-radius: 6px;
 }
 
 #close-button {
@@ -63,6 +64,13 @@
 
 .hide-fullscreen-image-wrapper {
     display: none;
+}
+
+@media screen and (min-width: 512px) {
+    .fullscreen-image-wrapper > div {
+        width: 60%;
+        max-width: 900px;
+    }
 }
 
 @media screen and (min-width: 728px) {

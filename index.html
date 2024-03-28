@@ -2,6 +2,7 @@
     <head>
         <meta name="viewport" content="width=device-width" />
         <title>3D print | Úvod</title>
+        <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.ico">
         <link rel="stylesheet" href="./css/styles.css" />
         <link rel="stylesheet" href="./css/navbar.css" />
         <link rel="stylesheet" href="./css/footer.css" />
@@ -11,7 +12,10 @@
     <body>
         <nav>
             <div class="visible-nav">
-                <a href="/"><p>3D Print</p></a>
+                <a class="header" href="/">
+                    <img src="img/icons/gear.svg"/>
+                    <p>3D Print</p>
+                </a>
                 <div class="desktop-nav">
                     <div>
                         <a href="index.html">Úvod</a>
@@ -72,7 +76,7 @@
                     vlastní 3D tiskárnu, stačí nahrát model a zadat adresu
                     doručení.
                 </p>
-                <button class="glassomorphism">Nahrát model</button>
+                <a class="button glassomorphism" href="objednavka.html">Nahrát model</a>
             </div>
         </section>
         <section class="margin-wrapper">
@@ -88,7 +92,7 @@
                 <img src="img/index.jpg" alt="Printed 3D model" />
             </div>
         </section>
-        <section class="last-section margin-wrapper">
+        <section class="last-section padding-wrapper">
             <div class="max-width">
                 <h2>Jak to funguje?</h2>
                 <ul class="steps">
@@ -131,7 +135,7 @@
                 </ul>
                 <div id="rocket-model"></div>
                 <div class="button-wrapper">
-                    <button class="glassomorphism">Objednat model</button>
+                    <a class="button glassomorphism" href="objednavka.html">Objednat model</a>
                 </div>
             </div>
             <div id="model-container"></div>
