@@ -252,6 +252,22 @@ iframe {
     -webkit-text-fill-color: transparent;
 }
 
+@media screen and (max-width: 972px) {
+    #model-container {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 792px) {
+    .flex-container {
+        display: flex;
+    }
+
+    .flex-container .form {
+        min-width: 400px;
+    }
+}
+
 @media screen and (min-width: 792px) {
     .max-width {
         max-width: 900px;

@@ -2,18 +2,18 @@
     <head>
         <meta name="viewport" content="width=device-width" />
         <title>3D print | Úvod</title>
-        <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.ico" />
         <link rel="stylesheet" href="./css/styles.css" />
         <link rel="stylesheet" href="./css/navbar.css" />
         <link rel="stylesheet" href="./css/footer.css" />
         <script defer src="js/navbar.js"></script>
-        <script defer type="module" src="js/threejs/main.js"></script>
+        <script type="module" src="dist/bundle.js"></script>
     </head>
     <body>
         <nav>
             <div class="visible-nav">
                 <a class="header" href="/">
-                    <img src="img/icons/gear.svg"/>
+                    <img src="img/icons/gear.svg" />
                     <p>3D Print</p>
                 </a>
                 <div class="desktop-nav">
@@ -76,7 +76,9 @@
                     vlastní 3D tiskárnu, stačí nahrát model a zadat adresu
                     doručení.
                 </p>
-                <a class="button glassomorphism" href="objednavka.html">Nahrát model</a>
+                <a class="button glassomorphism" href="objednavka.html"
+                    >Nahrát model</a
+                >
             </div>
         </section>
         <section class="margin-wrapper">
@@ -94,51 +96,60 @@
         </section>
         <section class="last-section padding-wrapper">
             <div class="max-width">
-                <h2>Jak to funguje?</h2>
-                <ul class="steps">
-                    <li>
-                        <span class="number">1.</span>
-                        <p>
-                            Vytvořte si 3D model ve formátu STL a nahrajte ho
-                            zde. Model můžete vytvořit v nástrojích jako je
-                            <a
-                                href="https://www.autodesk.cz/products/autocad/overview"
-                                >AutoCAD</a
-                            >
-                            nebo <a href="https://www.blender.org/">Blender</a>.
-                            Můžete si také vybrat již hotový model na stránce
-                            <a href="https://www.thingiverse.com/"
-                                >Thingiverse</a
-                            >.
-                        </p>
-                    </li>
-                    <li>
-                        <span class="number">2.</span>
-                        <p>
-                            Nahrajte model přes formulář zde a zvolte si rozměr.
-                        </p>
-                    </li>
-                    <li>
-                        <span class="number">3.</span>
-                        <p>
-                            Zvolte materiál, kterým chcete tisknout. Více o
-                            materiálech se můžete dočíst v sekci materiály.
-                        </p>
-                    </li>
-                    <li>
-                        <span class="number">4.</span>
-                        <p>
-                            Zadejte vaši adresu, zaplaťte a pak už se můžete
-                            těšit na váš 3D model, který přijde za pár dní.
-                        </p>
-                    </li>
-                </ul>
-                <div id="rocket-model"></div>
+                <div class="flex-container">
+                <div>
+                    <h2>Jak to funguje?</h2>
+                    <ul class="steps">
+                        <li>
+                            <span class="number">1.</span>
+                            <p>
+                                Vytvořte si 3D model ve formátu STL a nahrajte
+                                ho zde. Model můžete vytvořit v nástrojích jako
+                                je
+                                <a
+                                    href="https://www.autodesk.cz/products/autocad/overview"
+                                    >AutoCAD</a
+                                >
+                                nebo
+                                <a href="https://www.blender.org/">Blender</a>.
+                                Můžete si také vybrat již hotový model na
+                                stránce
+                                <a href="https://www.thingiverse.com/"
+                                    >Thingiverse</a
+                                >.
+                            </p>
+                        </li>
+                        <li>
+                            <span class="number">2.</span>
+                            <p>
+                                Nahrajte model přes formulář zde a zvolte si
+                                rozměr.
+                            </p>
+                        </li>
+                        <li>
+                            <span class="number">3.</span>
+                            <p>
+                                Zvolte materiál, kterým chcete tisknout. Více o
+                                materiálech se můžete dočíst v sekci materiály.
+                            </p>
+                        </li>
+                        <li>
+                            <span class="number">4.</span>
+                            <p>
+                                Zadejte vaši adresu, zaplaťte a pak už se můžete
+                                těšit na váš 3D model, který přijde za pár dní.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="model-container"></div>
+            </div>
                 <div class="button-wrapper">
-                    <a class="button glassomorphism" href="objednavka.html">Objednat model</a>
+                    <a class="button glassomorphism" href="objednavka.html"
+                        >Objednat model</a
+                    >
                 </div>
             </div>
-            <div id="model-container"></div>
         </section>
         <footer>
             <div class="margin-wrapper">
