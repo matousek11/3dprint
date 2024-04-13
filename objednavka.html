@@ -10,7 +10,9 @@
         <script defer src="js/navbar.js"></script>
         <script defer src="js/priceCalculator.js"></script>
         <script defer src="js/model/FormModel.js"></script>
-        <script type="module" src="dist/bundle.js"></script>
+        <script defer src="js/model/FileModel.js"></script>
+        <script defer src="js/model/UserDetailModel.js"></script>
+        <script defer type="module" src="dist/bundle.js"></script>
     </head>
     <body>
         <nav>
@@ -74,7 +76,7 @@
             <img class="main-img" src="img/cena.jpg" alt="3D printer" />
             <div class="main-text glassomorphism">
                 <h1>Objednávka</h1>
-                <p></p>
+                <p>Objednejte si svůj 3D model prostřednictvím formuláře níže a nechte si ho doručit až domů.</p>
             </div>
         </section>
         <section class="margin-wrapper">
@@ -84,6 +86,46 @@
                 <div class="flex-container">
                     <div class="form padding-wrapper">
                         <h3>Formulář</h3>
+                        <h4>Osobní údaje</h4>
+                        <div class="input-container">
+                            <div class="input-wrapper">
+                                <label for="name">Jméno:</label>
+                                <input
+                                    id="name"
+                                    type="text"
+                                    placeholder="Jméno"
+                                    class="clean-glassomorphism form-input"
+                                />
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="surname">Příjmení:</label>
+                                <input
+                                    id="surname"
+                                    type="text"
+                                    placeholder="Příjmení"
+                                    class="clean-glassomorphism form-input"
+                                />
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="email">Email:</label>
+                            <input
+                                id="email"
+                                type="email"
+                                placeholder="Email"
+                                class="clean-glassomorphism form-input"
+                            />
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="address">Adresa:</label>
+                            <input
+                                id="address"
+                                type="text"
+                                placeholder="Adresa"
+                                class="clean-glassomorphism form-input"
+                            />
+                        </div>
+                        <h4>3D model</h4>
                         <div class="input-wrapper">
                             <label for="materials">Materiály:</label>
                             <select
@@ -96,7 +138,7 @@
                                 <option value="2">PET-G</option>
                             </select>
                         </div>
-                        <div>
+                        <div class="input-container">
                             <div class="input-wrapper">
                                 <label for="x">x:</label>
                                 <input
@@ -125,6 +167,13 @@
                                 />
                             </div>
                         </div>
+                        <div class="file-input-wrapper">
+                            <label for="model-file">Soubor:</label>
+                            <label id="model-file-label" class="clean-glassomorphism form-input" for="model-file">Nahrajte soubor</label>
+                            <input type="file" id="model-file" name="model-file" />
+                            <span id="file-info-text" class="info-text hide-info-box" onchange="">Soubor byl nahrán</span>
+                        </div>
+                        <p id="price" class="order-price">0Kč</p>
                         <div class="button-wrapper">
                             <button
                                 id="calculate-price-button"
@@ -133,7 +182,6 @@
                                 Spočítat cenu
                             </button>
                         </div>
-                        <p id="price">0Kč</p>
                         <div class="button-wrapper">
                             <button
                                 id="order-button"
@@ -236,7 +284,7 @@
                         ></iframe>
                     </div>
                 </div>
-                <p class="info">Studentská práce &copy;3D Print</p>
+                <p class="info">Semestrální projekt(není reálný) &copy;3D Print</p>
             </div>
         </footer>
     </body>

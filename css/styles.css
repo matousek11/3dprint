@@ -252,6 +252,28 @@ iframe {
     -webkit-text-fill-color: transparent;
 }
 
+.file-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.file-input-wrapper label {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.file-input-wrapper label:nth-child(1) {
+    cursor: pointer;
+    justify-content: start;
+}
+
+.file-input-wrapper input[type="file"] {
+    display: none;
+}
+
 @media screen and (max-width: 972px) {
     #model-container {
         display: none;

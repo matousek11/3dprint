@@ -1,10 +1,11 @@
 class FormModel {
-    constructor (materialID, x, y, z, alertBox, header, text) {
+    constructor(userDetailModel, materialID, x, y, z, alertBox, header, text, fileModel) {
         this.materialPrice = [
-            2,
-            0.5,
-            2.4
+            0.002,
+            0.004,
+            0.003
         ]
+        this.userDetailModel = userDetailModel;
         this.materialID = materialID;
         this.x = x;
         this.y = y;
@@ -12,14 +13,16 @@ class FormModel {
         this.alertBox = alertBox;
         this.header = header;
         this.text = text;
+        this.fileModel = fileModel;
     }
 
-    estimatePrice (isOrder) {
-        if (this.validateValues()) {
+    estimatePrice = (isOrder) => {
+        if (this.validateModel(isOrder)) {
             let modelVolume = this.x * this.y * this.z;
             let modelPrice = modelVolume * this.materialPrice[this.materialID];
             if (isOrder === true) {
-                this.displayInfoBox('Odesláno', 'Objednávka byla odeslána.');
+                this.fileModel.hideFileText();
+                this.displayInfoBox('Odesláno', 'Objednávka byla odeslána. Proveďte platbu přes email, který jsme Vám zaslali.');
             }
             return modelPrice;
         }
@@ -27,7 +30,17 @@ class FormModel {
         return 0;
     }
 
-    validateValues() {
+    validateModel(isOrder) {
+        if (isOrder) {
+            if (!this.fileModel.validateModel(this.displayInfoBox)) {
+                return false;
+            }
+    
+            if (!this.userDetailModel.validateModel(this.displayInfoBox)) {
+                return false
+            }
+        }
+
         if (this.materialID < 0 && this.materialID > 2) {
             this.displayInfoBox('Špatné ID materiálu', 'Vyberte jiný materiál.');
             return false;
@@ -51,7 +64,7 @@ class FormModel {
         return true;
     }
 
-    displayInfoBox(header, text) {
+    displayInfoBox = (header, text) => {
         this.alertBox.classList.remove('hide-info-box');
         this.header.innerText = header;
         this.text.innerText = text;
