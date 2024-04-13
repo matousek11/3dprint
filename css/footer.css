@@ -13,7 +13,7 @@ footer {
 .info {
     text-align: center;
     font-size: 12px;
-    margin-top: 0;
+    margin-top: 5px;
     margin-bottom: 0;
 }
 
@@ -37,6 +37,12 @@ footer {
     width: 20px;
     margin-right: 10px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 792px) {
+    .desktop-footer {
+        margin-left: 20px;
+    }
 }
 
 @media screen and (min-width: 792px) {

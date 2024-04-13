@@ -311,3 +311,9 @@ iframe {
         gap: 15px;
     }
 }
+
+@media screen and (max-width: 1008px) {
+    .main-text {
+        left: 8px;
+    }
+}

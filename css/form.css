@@ -117,7 +117,7 @@ h3 {
 @media screen and (min-width: 472px) {
     .input-container {
         display: flex;
-        gap: 5px;
+        gap: 12px;
     }
 
     .input-container .input-wrapper {
