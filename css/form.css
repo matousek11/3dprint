@@ -98,12 +98,13 @@ h3 {
     font-size: 40px;
     font-weight: bold;
     margin-top: 0px;
-    padding-bottom: 13px;
+    padding-bottom: 0;
+    margin-bottom: 0;
     transition: all .3s ease-in-out;
 }
 
 .order-price {
-    margin-bottom: 5px;
+    margin-bottom: 15px !important;
 }
 
 .info-text {
