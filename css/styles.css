@@ -128,7 +128,7 @@ iframe {
 .main-text {
     position: absolute;
     max-width: 350px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     right: 8px;
     bottom: -5px;
     border-radius: 10px;
@@ -160,10 +160,13 @@ iframe {
     padding: 0px 15px;
 }
 
+.materials-content p {
+    max-width: 800px;
+}
+
 .info-cell {
     min-width: 200px;
     max-width: 280px;
-    margin-left: 20px;
     right: 8px;
     bottom: -5px;
     border-radius: 10px;
@@ -183,7 +186,6 @@ iframe {
 }
 
 .colored-line {
-    max-width: 900px;
     height: 3px;
     background: linear-gradient(-275deg,rgba(63, 0, 113, 0.6), rgba(251, 37, 118, 0.6));
     border: none;
@@ -292,17 +294,20 @@ iframe {
 
 @media screen and (min-width: 792px) {
     .max-width {
-        max-width: 900px;
+        position: relative;
+        max-width: 1000px;
         margin: 0 auto;
     }
 
     .main-text {
         bottom: 50px;
-        left: 1%;
+        left: 0;
     }
 
     .material-properties-wrapper {
         display: flex;
+        justify-content: flex-start;
         align-items: start;
+        gap: 15px;
     }
 }

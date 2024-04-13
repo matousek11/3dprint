@@ -81,7 +81,7 @@
 
 @media screen and (min-width: 998px) {
     .gallery {
-        grid-template-columns: 300px 300px 300px;
+        grid-template-columns: 325px 325px 325px;
         justify-content: space-around;
     }
 }

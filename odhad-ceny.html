@@ -2,7 +2,7 @@
     <head>
         <meta name="viewport" content="width=device-width" />
         <title>3D print | Odhad ceny</title>
-        <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.ico" />
         <link rel="stylesheet" href="./css/styles.css" />
         <link rel="stylesheet" href="./css/navbar.css" />
         <link rel="stylesheet" href="./css/footer.css" />
@@ -18,7 +18,7 @@
         <nav>
             <div class="visible-nav">
                 <a class="header" href="/">
-                    <img src="img/icons/gear.svg"/>
+                    <img src="img/icons/gear.svg" />
                     <p>3D Print</p>
                 </a>
                 <div class="desktop-nav">
@@ -74,12 +74,14 @@
         </nav>
         <section class="intro">
             <img class="main-img" src="img/odhad.jpg" alt="3D printer" />
-            <div class="main-text glassomorphism">
-                <h1>Odhad ceny</h1>
-                <p>
-                    Pro odhad ceny tisku využijte formulář níže. Pokud nevíte
-                    jaký zvolit materiál navštivte stránku materiály.
-                </p>
+            <div class="max-width">
+                <div class="main-text glassomorphism">
+                    <h1>Odhad ceny</h1>
+                    <p>
+                        Pro odhad ceny tisku využijte formulář níže. Pokud
+                        nevíte jaký zvolit materiál navštivte stránku materiály.
+                    </p>
+                </div>
             </div>
         </section>
         <section class="margin-wrapper">
@@ -92,73 +94,76 @@
                     . Dále zvolte velikost modelu, který chcete vytisknout.
                 </p>
                 <div class="flex-container">
-                <div class="form padding-wrapper">
-                    <h3>Formulář</h3>
-                    <div class="input-wrapper">
-                        <label for="materials">Materiály:</label>
-                        <select
-                            id="materials"
-                            name="materials"
-                            class="clean-glassomorphism form-input"
-                        >
-                            <option value="0">PLA</option>
-                            <option value="1">ABS</option>
-                            <option value="2">PET-G</option>
-                        </select>
-                    </div>
-                    <div>
+                    <div class="form padding-wrapper">
+                        <h3>Formulář</h3>
                         <div class="input-wrapper">
-                            <label for="x">x:</label>
-                            <input
-                                id="x"
-                                type="number"
-                                placeholder="Délka v ose x v mm"
+                            <label for="materials">Materiály:</label>
+                            <select
+                                id="materials"
+                                name="materials"
                                 class="clean-glassomorphism form-input"
-                            />
+                            >
+                                <option value="0">PLA</option>
+                                <option value="1">ABS</option>
+                                <option value="2">PET-G</option>
+                            </select>
                         </div>
-                        <div class="input-wrapper">
-                            <label for="y">y:</label>
-                            <input
-                                id="y"
-                                type="number"
-                                placeholder="Délka v ose x v mm"
-                                class="clean-glassomorphism form-input"
-                            />
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="z">z:</label>
-                            <input
-                                id="z"
-                                type="number"
-                                placeholder="Délka v ose x v mm"
-                                class="clean-glassomorphism form-input"
-                            />
-                        </div>
-                    </div>
-                    <div class="button-wrapper">
-                        <button
-                            id="calculate-price-button"
-                            class="clean-glassomorphism"
-                        >
-                            Spočítat cenu
-                        </button>
-                    </div>
-                    <p id="price">0Kč</p>
-
-                    <!-- info-box -->
-                    <div id="info-box" class="info-box hide-info-box glassomorphism">
-                        <h3 id="info-box-header">Název chyby</h3>
-                        <p id="info-box-text">Jak chybu vyřešit.</p>
                         <div>
-                            <button id="info-box-close-button">
-                                Zavřít
+                            <div class="input-wrapper">
+                                <label for="x">x:</label>
+                                <input
+                                    id="x"
+                                    type="number"
+                                    placeholder="Délka v ose x v mm"
+                                    class="clean-glassomorphism form-input"
+                                />
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="y">y:</label>
+                                <input
+                                    id="y"
+                                    type="number"
+                                    placeholder="Délka v ose x v mm"
+                                    class="clean-glassomorphism form-input"
+                                />
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="z">z:</label>
+                                <input
+                                    id="z"
+                                    type="number"
+                                    placeholder="Délka v ose x v mm"
+                                    class="clean-glassomorphism form-input"
+                                />
+                            </div>
+                        </div>
+                        <div class="button-wrapper">
+                            <button
+                                id="calculate-price-button"
+                                class="clean-glassomorphism"
+                            >
+                                Spočítat cenu
                             </button>
                         </div>
+                        <p id="price">0Kč</p>
+
+                        <!-- info-box -->
+                        <div
+                            id="info-box"
+                            class="info-box hide-info-box glassomorphism"
+                        >
+                            <h3 id="info-box-header">Název chyby</h3>
+                            <p id="info-box-text">Jak chybu vyřešit.</p>
+                            <div>
+                                <button id="info-box-close-button">
+                                    Zavřít
+                                </button>
+                            </div>
+                        </div>
+                        <div class="info-box-background glassomorphism"></div>
                     </div>
-                    <div class="info-box-background glassomorphism"></div>
+                    <div id="model-container"></div>
                 </div>
-                <div id="model-container"></div>
-            </div>
             </div>
         </section>
         <footer>
@@ -235,7 +240,9 @@
                         ></iframe>
                     </div>
                 </div>
-                <p class="info">Semestrální projekt(není reálný) &copy;3D Print</p>
+                <p class="info">
+                    Semestrální projekt(není reálný) &copy;3D Print
+                </p>
             </div>
         </footer>
     </body>
