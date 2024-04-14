@@ -17,15 +17,15 @@ let container = document.getElementById('model-container');
 container.appendChild(renderer.domElement);
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
-camera.position.set(1, 2, 5);
+const camera = new THREE.PerspectiveCamera(45, width / height, 0.01, 1000);
+camera.position.set(0, 0.07, 0.14);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDumping = true;
 controls.enablePan = false;
-controls.minDistance = 5;
-controls.maxDistance = 20;
-controls.minPolarAngle = 0.5;
+controls.minDistance = 0;
+controls.maxDistance = 1;
+controls.minPolarAngle = 0;
 controls.maxPolarAngle = 1.5;
 controls.autoRotate = true;
 controls.target = new THREE.Vector3(0, 0, 0);
@@ -36,7 +36,7 @@ spotLight.position.set(20, 25, 20);
 scene.add(spotLight);
 
 const loader = new GLTFLoader();
-loader.load('3dModels/bricks.gltf', (gltf) => {
+loader.load('3dModels/tvc.gltf', (gltf) => {
     const mesh = gltf.scene;
     mesh.position.set(0, 0, 0);
     scene.add(mesh);
