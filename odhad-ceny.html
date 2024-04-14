@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="cs">
     <head>
-        <meta name="viewport" content="width=device-width" />
-        <meta name="keywords" content="3dprint, 3dprinter" />
-        <meta name="description" content="Vytiskněte si cokoliv chcete bez nutnosti pořizovat si vlastní 3D tiskárnu." />
+        <meta name="viewport" content="width=device-width" >
+        <meta name="keywords" content="3dprint, 3dprinter" >
+        <meta name="description" content="Vytiskněte si cokoliv chcete bez nutnosti pořizovat si vlastní 3D tiskárnu." >
+        <meta charset="UTF-8">
         <title>3D print | Odhad ceny</title>
-        <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.ico" />
-        <link rel="stylesheet" href="./css/styles.css" />
-        <link rel="stylesheet" href="./css/navbar.css" />
-        <link rel="stylesheet" href="./css/footer.css" />
-        <link rel="stylesheet" href="./css/form.css" />
+        <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.ico" >
+        <link rel="stylesheet" href="./css/styles.css" >
+        <link rel="stylesheet" href="./css/navbar.css" >
+        <link rel="stylesheet" href="./css/footer.css" >
+        <link rel="stylesheet" href="./css/form.css" >
         <script defer src="js/navbar.js"></script>
         <script defer src="js/priceCalculator.js"></script>
         <script defer src="js/model/FormModel.js"></script>
@@ -21,7 +22,7 @@
         <nav>
             <div class="visible-nav">
                 <a class="header" href="/">
-                    <img src="img/icons/gear.svg" alt="Company icon"/>
+                    <img src="img/icons/gear.svg" alt="Company icon">
                     <p>3D Print</p>
                 </a>
                 <div class="desktop-nav">
@@ -76,7 +77,7 @@
             </div>
         </nav>
         <section class="intro">
-            <img class="main-img" src="img/odhad.webp" alt="3D printer" />
+            <img class="main-img" src="img/odhad.webp" alt="3D printer" >
             <div class="max-width">
                 <div class="main-text glassomorphism">
                     <h1>Odhad ceny</h1>
@@ -97,7 +98,7 @@
                     . Dále zvolte velikost modelu, který chcete vytisknout.
                 </p>
                 <div class="flex-container">
-                    <div class="form padding-wrapper">
+                    <form class="form padding-wrapper" onsubmit="return false;">
                         <h3>Formulář</h3>
                         <div class="input-wrapper">
                             <label for="materials">Materiály:</label>
@@ -119,7 +120,7 @@
                                     type="number"
                                     placeholder="Délka v ose x v mm"
                                     class="clean-glassomorphism form-input"
-                                />
+                                >
                             </div>
                             <div class="input-wrapper">
                                 <label for="y">y:</label>
@@ -128,7 +129,7 @@
                                     type="number"
                                     placeholder="Délka v ose x v mm"
                                     class="clean-glassomorphism form-input"
-                                />
+                                >
                             </div>
                             <div class="input-wrapper">
                                 <label for="z">z:</label>
@@ -137,7 +138,7 @@
                                     type="number"
                                     placeholder="Délka v ose x v mm"
                                     class="clean-glassomorphism form-input"
-                                />
+                                >
                             </div>
                         </div>
                         <div class="button-wrapper">
@@ -164,7 +165,7 @@
                             </div>
                         </div>
                         <div class="info-box-background glassomorphism"></div>
-                    </div>
+                    </form>
                     <div id="model-container"></div>
                 </div>
             </section>
@@ -209,7 +210,7 @@
                                     <img
                                         src="img/icons/email.svg"
                                         alt="email icon"
-                                    />
+                                    >
                                     <a href="mailto:matousek1199@gmail.com"
                                         >matousek1199@gmail.com</a
                                     >
@@ -221,7 +222,7 @@
                                     <img
                                         src="img/icons/phone.svg"
                                         alt="phone icon"
-                                    />
+                                    >
                                     <a href="tel:+420000000000">000 000 000</a>
                                 </div>
                                 <div></div>
@@ -235,8 +236,6 @@
                             width="250"
                             height="250"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5615.863315869834!2d15.832088604870552!3d50.20579514309079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c2b34870002db%3A0xb60b1af457f3fbb2!2sUniverzita%20Hradec%20Kr%C3%A1lov%C3%A9%20%E2%80%93%20budova%20A!5e0!3m2!1scs!2scz!4v1710001424466!5m2!1scs!2scz"
-                            width="600"
-                            height="450"
                             style="border: 0"
                             allowfullscreen=""
                             loading="lazy"
@@ -245,8 +244,8 @@
                     </div>
                 </div>
                 <p class="info">
-                    Studentský zápočtový projekt | Poslední aktualizace
-                    14.04.2024
+                    Studentský zápočtový projekt
+                    <br> &copy; 3D Print | Poslední aktualizace 14.04.2024
                 </p>
             </div>
         </footer>

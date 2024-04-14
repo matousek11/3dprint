@@ -3,16 +3,6 @@
     src: url(../fonts/manrope.ttf)
 }
 
-@font-face {
-    font-family: munich;
-    src: url(../fonts/munich.ttf)
-}
-
-@font-face {
-    font-family: peace-sans;
-    src: url(../fonts/peace-sans.otf)
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -139,7 +129,6 @@ table tr td:nth-child(1) {
 .main-text {
     position: absolute;
     max-width: 350px;
-    /* margin-left: 20px; */
     right: 8px;
     bottom: -5px;
     border-radius: 10px;
