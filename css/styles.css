@@ -94,6 +94,17 @@ iframe {
     margin-left: 10px;
 }
 
+table {
+    color: white;
+    background: linear-gradient(-45deg,rgba(63, 0, 113, 0.6), rgba(251, 37, 118, 0.6));
+    padding: 7px;
+    border-radius: 10px;
+}
+
+table tr td:nth-child(1) {
+    font-weight: bold;
+}
+
 .glassomorphism {
     backdrop-filter: blur(5px) saturate(100%);
     background: linear-gradient(-45deg,rgba(63, 0, 113, 0.4), rgba(251, 37, 118, 0.4));
@@ -296,7 +307,6 @@ iframe {
     .max-width {
         position: relative;
         max-width: 1000px;
-        margin: 0 auto;
     }
 
     .main-text {
@@ -309,6 +319,12 @@ iframe {
         justify-content: flex-start;
         align-items: start;
         gap: 15px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .max-width {
+        margin: 0 auto;
     }
 }
 
