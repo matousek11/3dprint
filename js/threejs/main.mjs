@@ -36,8 +36,8 @@ spotLight.position.set(20, 25, 20);
 scene.add(spotLight);
 
 const loader = new GLTFLoader();
-loader.load('3dModels/tvc.gltf', (gltf) => {
-    const mesh = gltf.scene;
+loader.load('3dModels/tvc.png', (gltf) => { // when hosting outside of uhk is used it can be just 3dModels/tvc.gltf
+    const mesh = gltf.scene; // model is actualy gltf file but uhk hosting doesnt allow this type of file
     mesh.position.set(0, 0, 0);
     scene.add(mesh);
 });
